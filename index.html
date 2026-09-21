@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claudia Sámano-Robles — Economista aplicada</title>
+<meta name="description" content="Claudia Sámano-Robles, economista aplicada y profesora-investigadora del CIDE. Investigación sobre desigualdad del ingreso, pobreza, educación y género en América Latina.">
+<meta name="author" content="Claudia Sámano-Robles">
+<meta name="theme-color" content="#1F6F5C">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231F6F5C'/><path d='M5 27C15 27 22 21 27 5' stroke='%23EEEFE8' stroke-width='3.5' fill='none' stroke-linecap='round'/></svg>">
+
+<!-- ===== Vista previa en LinkedIn, X y WhatsApp =====
+     Cambia USUARIO por tu usuario de GitHub en las 4 líneas marcadas. -->
+<link rel="canonical" href="https://USUARIO.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Claudia Sámano-Robles">
+<meta property="og:title" content="Claudia Sámano-Robles — Economista aplicada">
+<meta property="og:description" content="Desigualdad del ingreso, pobreza, educación y género en América Latina. Profesora-investigadora del CIDE, Ciudad de México.">
+<meta property="og:url" content="https://USUARIO.github.io/">
+<meta property="og:image" content="https://USUARIO.github.io/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Claudia Sámano-Robles, economista aplicada. Curva de Lorenz.">
+<meta property="og:locale" content="es_MX">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claudia Sámano-Robles — Economista aplicada">
+<meta name="twitter:description" content="Desigualdad del ingreso, pobreza, educación y género en América Latina. Profesora-investigadora del CIDE, Ciudad de México.">
+<meta name="twitter:image" content="https://USUARIO.github.io/preview.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EEEFE8;
+    --paper-2:#E5E7DD;
+    --ink:#14212E;
+    --ink-soft:#57626C;
+    --rule:#C9CDC0;
+    --accent:#1F6F5C;
+    --accent-soft:#D9E6E0;
+    --serif:"Spectral",Georgia,"Times New Roman",serif;
+    --sans:"IBM Plex Sans",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+    color-scheme:light dark;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#101A22;
+      --paper-2:#17242E;
+      --ink:#E7EAE3;
+      --ink-soft:#9AA6AE;
+      --rule:#2C3A45;
+      --accent:#78C4A9;
+      --accent-soft:#1B3A33;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#101A22;
+    --paper-2:#17242E;
+    --ink:#E7EAE3;
+    --ink-soft:#9AA6AE;
+    --rule:#2C3A45;
+    --accent:#78C4A9;
+    --accent-soft:#1B3A33;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 5.5rem)}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:17px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration-color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}
+  a:hover{color:var(--accent)}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+  .shell{max-width:1180px;margin:0 auto;padding:0 clamp(1.15rem,4vw,3rem)}
+  @media (min-width:960px){
+    .shell{display:grid;grid-template-columns:19rem 1fr;gap:clamp(2.5rem,5vw,5rem);align-items:start}
+  }
+
+  /* ---------- rail ---------- */
+  .rail{padding:2.6rem 0 1.5rem}
+  @media (min-width:960px){
+    .rail{position:sticky;top:calc(env(safe-area-inset-top,0px) + 2.6rem);padding:2.6rem 0 3rem;height:auto}
+  }
+  .name{
+    font-size:clamp(1.9rem,4.4vw,2.3rem);
+    font-weight:500;line-height:1.14;letter-spacing:-.015em;margin:0 0 .5rem;
+  }
+  .name .surname{display:block;font-style:italic;font-weight:400;color:var(--accent)}
+  .role{font-family:var(--sans);font-size:.83rem;line-height:1.5;color:var(--ink-soft);margin:0 0 1.5rem;max-width:22rem}
+  .rail-meta{font-family:var(--sans);font-size:.83rem;color:var(--ink-soft);margin:0 0 1.5rem}
+  .rail-meta a{display:inline-block;color:var(--ink)}
+
+  nav.index{border-top:1px solid var(--rule);margin-bottom:1.5rem}
+  nav.index ol{list-style:none;margin:0;padding:0;display:flex;gap:1.1rem;overflow-x:auto;scrollbar-width:none;
+    font-family:var(--sans);font-size:.8rem;padding:.7rem 0}
+  nav.index ol::-webkit-scrollbar{display:none}
+  nav.index a{display:block;white-space:nowrap;text-decoration:none;color:var(--ink-soft);padding:.1rem 0;border-bottom:1px solid transparent}
+  nav.index a[aria-current="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+  @media (min-width:960px){
+    nav.index ol{flex-direction:column;gap:0;overflow:visible;padding:.9rem 0}
+    nav.index a{padding:.3rem 0}
+  }
+
+  .lang{display:inline-flex;border:1px solid var(--rule);border-radius:2px;overflow:hidden;font-family:var(--sans);font-size:.78rem}
+  .lang button{
+    appearance:none;border:0;background:transparent;color:var(--ink-soft);
+    padding:.35rem .8rem;cursor:pointer;font:inherit;letter-spacing:.02em;
+  }
+  .lang button[aria-pressed="true"]{background:var(--accent);color:var(--paper)}
+  .lang button:not([aria-pressed="true"]):hover{color:var(--ink)}
+
+  /* ---------- main ---------- */
+  main{padding-bottom:4rem}
+  section{padding:2.8rem 0;border-top:1px solid var(--rule)}
+  section:first-child{border-top:0;padding-top:2.4rem}
+  @media (min-width:960px){section{padding:3.4rem 0}section:first-child{padding-top:3.2rem}}
+  h2{
+    font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.06em;
+    color:var(--accent);margin:0 0 1.6rem;
+  }
+  h3{font-family:var(--sans);font-size:.88rem;font-weight:600;color:var(--ink-soft);margin:2.2rem 0 .9rem}
+  h3:first-of-type{margin-top:0}
+  .lede{font-size:clamp(1.12rem,2.3vw,1.35rem);line-height:1.55;max-width:34em;margin:0 0 1.6rem;font-weight:300}
+  .lede em{font-style:italic;color:var(--accent)}
+  p{max-width:36em}
+
+  .areas{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.45rem;font-family:var(--sans);font-size:.8rem}
+  .areas li{background:var(--accent-soft);color:var(--ink);padding:.28rem .7rem;border-radius:2px}
+
+  /* entry list with hanging date */
+  .entries{list-style:none;margin:0;padding:0}
+  .entries li{padding:.85rem 0;border-bottom:1px solid var(--rule)}
+  .entries li:last-child{border-bottom:0}
+  @media (min-width:640px){
+    .entries li{display:grid;grid-template-columns:8.5rem 1fr;gap:1.4rem;align-items:baseline}
+  }
+  .when{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);letter-spacing:.01em}
+  .what{margin:0}
+  .what strong{font-weight:600}
+  .what .sub{display:block;font-size:.93rem;color:var(--ink-soft);line-height:1.5}
+  .cite{margin:0;font-size:.97rem;line-height:1.55}
+  .cite .venue{font-style:italic}
+  .cite a.doi{font-family:var(--sans);font-size:.74rem;color:var(--ink-soft);display:inline-block;margin-top:.2rem;word-break:break-word}
+
+  details.more{margin-top:1rem;font-family:var(--sans);font-size:.85rem}
+  details.more summary{cursor:pointer;color:var(--accent);list-style:none;display:inline-block;border-bottom:1px solid var(--rule);padding-bottom:.15rem}
+  details.more summary::-webkit-details-marker{display:none}
+  details.more[open] summary{margin-bottom:1rem}
+  details.more .entries{font-family:var(--serif)}
+
+  .plain{list-style:none;margin:0;padding:0;font-size:.97rem}
+  .plain li{padding:.42rem 0;border-bottom:1px solid var(--rule)}
+  .plain li:last-child{border-bottom:0}
+  .plain .when{margin-right:.6rem}
+
+  .contact-line{font-size:clamp(1.15rem,3vw,1.5rem);font-weight:300;margin:0 0 1.2rem}
+  .contact-line a{text-decoration:none;border-bottom:1px solid var(--accent)}
+  footer{font-family:var(--sans);font-size:.76rem;color:var(--ink-soft);padding:1.5rem 0 2.5rem;border-top:1px solid var(--rule)}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="rail">
+    <h1 class="name">Claudia<span class="surname">Sámano-Robles</span></h1>
+    <p class="role" data-i18n="role"></p>
+    <p class="rail-meta">
+      <span data-i18n="city"></span><br>
+      <a href="mailto:claudia.samano@cide.edu">claudia.samano@cide.edu</a>
+    </p>
+    <nav class="index" aria-label="Secciones"><ol id="nav"></ol></nav>
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <button type="button" data-lang="es" aria-pressed="true">Español</button>
+      <button type="button" data-lang="en" aria-pressed="false">English</button>
+    </div>
+  </header>
+
+  <main id="main"></main>
+</div>
+
+<script>
+const D = {
+  es:{
+    role:"Economista aplicada. Profesora-investigadora y directora de la División de Estudios sobre el Desarrollo, CIDE.",
+    city:"Ciudad de México, México",
+    nav:{profile:"Perfil",publications:"Publicaciones",teaching:"Docencia",experience:"Experiencia",activity:"Actividad académica",contact:"Contacto"},
+    lede:"Su investigación estudia cómo la educación, el ingreso y el género configuran la <em>desigualdad</em> en América Latina, y qué políticas pueden cambiarla.",
+    bio:[
+      "Claudia Sámano-Robles es profesora-investigadora del Centro de Investigación y Docencia Económicas (CIDE) en la Ciudad de México, donde actualmente es directora de la División de Estudios sobre el Desarrollo. Es doctora en Economía por la University of Essex, maestra en Economía por la University of Western Ontario y maestra en Gobierno y Asuntos Públicos por la FLACSO México.",
+      "Su investigación combina dos áreas: la distribución del ingreso, la medición de la pobreza y la desigualdad, y los efectos de la educación y la política pública sobre el bienestar; y los estudios de género e interseccionales, que incluyen la economía del cuidado, la violencia de género, la participación económica de las mujeres y las desigualdades ligadas a la salud y al curso de vida. Centrado en México con una perspectiva comparada latinoamericana, su trabajo utiliza econometría aplicada para generar evidencia sobre problemas del desarrollo económico y social.",
+      "Ha sido consultora para la OCDE, el Banco Mundial, UNICEF y UNFPA México, y es miembro de la International Association for Feminist Economics (IAFFE) y de la Red WAPLAC sobre Bienestar y Política Pública en América Latina y el Caribe."
+    ],
+    areas:["Educación","Desigualdad del ingreso","Pobreza","Género","América Latina"],
+    h:{appointments:"Nombramientos",education:"Formación",affiliations:"Afiliaciones",
+       articles:"Artículos y capítulos publicados",chapters:"Capítulos en prensa",books:"Libros",wp:"Documentos de trabajo",
+       courses:"Cursos impartidos",supervisor:"Dirección de tesis",chair:"Presidencia de jurado",committee:"Sinodal",
+       consulting:"Consultoría independiente",research:"Investigación asociada",public:"Servicio público",
+       talks:"Seminarios y conferencias",review:"Dictaminación de revistas",awards:"Becas y distinciones",press:"Prensa",skills:"Idiomas y herramientas"},
+    appointments:[
+      {when:"Marzo 2026 – actual",what:"Directora de División",sub:"División de Estudios sobre el Desarrollo, Centro de Investigación y Docencia Económicas (CIDE), Ciudad de México"},
+      {when:"Mayo 2023 – actual",what:"Profesora-investigadora",sub:"Centro de Investigación y Docencia Económicas (CIDE), Ciudad de México"},
+      {when:"Septiembre 2021 – actual",what:"Tutora",sub:"Facultad Latinoamericana de Ciencias Sociales (FLACSO), Ciudad de México"}
+    ],
+    education:[
+      {when:"2021",what:"Doctorado en Economía",sub:"University of Essex, Colchester, Reino Unido"},
+      {when:"2014",what:"Maestría en Economía",sub:"University of Western Ontario, London, Canadá"},
+      {when:"2010",what:"Maestría en Gobierno y Asuntos Públicos",sub:"FLACSO, Ciudad de México"},
+      {when:"2005",what:"Licenciatura en Economía",sub:"Universidad Nacional Autónoma de México (UNAM), Ciudad de México"}
+    ],
+    affiliations:["Red WAPLAC sobre Bienestar y Política Pública en América Latina y el Caribe","International Association for Feminist Economics (IAFFE)"],
+    courses:[
+      {when:"Primavera 2026",what:"Econometría",sub:"Doctorado en Políticas Públicas, CIDE"},
+      {when:"Otoño 2025",what:"Pobreza y educación",sub:"Maestría en Economía del Desarrollo, CIDE"},
+      {when:"Otoño 2025",what:"Métodos cuantitativos básicos",sub:"Licenciatura en Ciencia Política y Relaciones Internacionales, CIDE"},
+      {when:"Otoño 2024",what:"Microeconomía I",sub:"Maestría en Economía del Desarrollo, CIDE"},
+      {when:"Otoño 2024",what:"Métodos cuantitativos",sub:"Maestría en Políticas Públicas Comparadas, FLACSO"},
+      {when:"Otoño 2023",what:"Economía del comportamiento para políticas públicas",sub:"Maestría en Políticas Públicas Comparadas, FLACSO"}
+    ],
+    consulting:[
+      {when:"Jun – Sep 2025",what:"UNFPA México",sub:"Investigación cuantitativa y cualitativa sobre los efectos económicos de la menopausia en las mujeres en México."},
+      {when:"Mar – Jul 2022",what:"OCDE",sub:"On Shaky Ground? Income Instability and Economic Insecurity in Europe, OECD Publishing, París (2023)."},
+      {when:"Oct – Dic 2021",what:"Instituto de Liderazgo Simone de Beauvoir, A.C.",sub:"Evaluación de la implementación de la política piloto de cuidados en Iztapalapa."},
+      {when:"May – Jun 2015",what:"UNICEF",sub:"Investigación sobre niñas y niños fuera de la escuela en México con encuestas de hogares y registros administrativos."},
+      {when:"Abr – Jun 2013",what:"Banco Mundial",sub:"Investigación sobre educación en América Latina con encuestas de ingreso de los años ochenta a los dos mil."}
+    ],
+    research:[{when:"May 2011 – Jun 2012",what:"Instituto de Innovación Educativa",sub:"Investigadora asociada. Análisis empírico de educación, desigualdad y pobreza con encuestas de hogares de 18 países de América Latina."}],
+    publicService:[
+      {when:"Sep 2010 – Abr 2011",what:"COFECE",sub:"Directora adjunta en la Dirección de Concentraciones, Comisión Federal de Competencia Económica."},
+      {when:"Oct 2005 – Ago 2008",what:"STC Metro",sub:"Gerente adjunta en la Dirección de Finanzas del Sistema de Transporte Colectivo, Ciudad de México."}
+    ],
+    talks:[
+      {when:"Febrero 2025",what:"Medición de la desigualdad y la pobreza con datos de ingreso y consumo para México",sub:"Seminario Permanente de Desigualdad Socioeconómica, COLMEX"},
+      {when:"Enero 2025",what:"Educación en México: PISA, rezago escolar y contexto rural",sub:"Seminario Internacional Educación y Desarrollo Regional, COLPUE"},
+      {when:"2023 – 2024",what:"Seminario Permanente sobre Desarrollo Económico, Social y Tecnológico de México",sub:"Coordinación y organización: educación, desigualdad, pobreza, brecha de género, buen vivir, progreso tecnológico y trilema energético"},
+      {when:"Mayo 2024",what:"Measuring inequality and poverty with income and consumption for Mexico",sub:"Conferencia internacional WAPLAC, San José, Costa Rica"},
+      {when:"Noviembre 2023",what:"The impact of education on income inequality in Latin America",sub:"Seminario de nuevos profesores, CIDE"},
+      {when:"Septiembre 2023",what:"Medición multidimensional de la pobreza en México: discusión sobre la medición del ingreso",sub:"INEGI, CONEVAL y COLMEX"},
+      {when:"Mayo 2022",what:"The effects of education on inequality in Latin America",sub:"FLACSO México"},
+      {when:"Julio 2017",what:"Conferencia internacional ECINEQ",sub:"Society for the Study of Economic Inequality, Stone Center for Socioeconomic Inequality, Nueva York"}
+    ],
+    training:[
+      {when:"2017",what:"Implementación y estimación de comandos en Stata/Mata",sub:"Center for Microdata Methods and Practice, Londres"},
+      {when:"2017",what:"Muestreo en encuestas y no respuesta",sub:"University of Essex"},
+      {when:"2017",what:"Aplicaciones del análisis de datos",sub:"University of Essex"},
+      {when:"2016",what:"Economía y econometría del desarrollo humano y la movilidad social",sub:"Clase magistral de James Heckman, Center for Microdata Methods and Practice, Londres"},
+      {when:"2016",what:"Seminario de evaluación de impacto contrafactual",sub:"National Centre for Research Methods, Universidad de Southampton"},
+      {when:"2016",what:"Métodos de datos panel",sub:"Center for Microdata Methods and Practice, Londres"},
+      {when:"2013",what:"Escuela de verano OPHI sobre pobreza multidimensional",sub:"George Washington University, Washington D.C."}
+    ],
+    awards:[
+      {when:"2015 – 2018",what:"Economic and Social Research Council Doctoral Training Studentship (ESRC)"},
+      {when:"2012 – 2016",what:"Beca para estudios de posgrado, CONACYT"},
+      {when:"2008 – 2010",what:"Beca para estudios de posgrado, CONACYT"},
+      {when:"2001 – 2005",what:"Beca de excelencia académica, Facultad de Economía, UNAM"}
+    ],
+    press:[{when:"Septiembre 2023",what:"Milenio"},{when:"Noviembre 2023",what:"Educación y desigualdad"}],
+    skills:["Español (nativo)","Inglés (fluido)","Stata","LaTeX","R (básico)"],
+    reviewLabel:"Dictaminadora para",
+    moreAdvising:"Ver dirección de tesis y jurados",
+    trainingLabel:"Ver formación adicional",
+    contactLede:"Escríbeme para colaboraciones de investigación, asesoría de tesis o consultoría en desigualdad, pobreza y género.",
+    contactNote:"CIDE, División de Estudios sobre el Desarrollo, Ciudad de México.",
+    footer:"Última actualización: 2026. Sitio personal de Claudia Sámano-Robles."
+  },
+  en:{
+    role:"Applied economist. Professor-Researcher and Head of the Division of Development Studies, CIDE.",
+    city:"Mexico City, Mexico",
+    nav:{profile:"Profile",publications:"Publications",teaching:"Teaching",experience:"Experience",activity:"Academic activity",contact:"Contact"},
+    lede:"Her research examines how education, income and gender shape <em>inequality</em> in Latin America, and which policies can change it.",
+    bio:[
+      "Claudia Sámano-Robles is Professor-Researcher at the Center for Research and Teaching in Economics (CIDE) in Mexico City, where she is currently the head of the Division of Development Studies. She holds a PhD in Economics from the University of Essex, an MA in Economics from the University of Western Ontario, and an MA in Government and Public Affairs from FLACSO Mexico.",
+      "Her research combines two areas: the distribution of income, the measurement of poverty and inequality, and the effects of education and public policy on wellbeing; and gender and intersectional studies, including the care economy, gender-based violence, women's economic participation, and inequalities linked to health and the life course. Centred on Mexico with a comparative Latin American perspective, her work uses applied econometrics to generate evidence on problems of economic and social development.",
+      "She has worked as a consultant for the OECD, the World Bank, UNICEF, and UNFPA Mexico, and is a member of the International Association for Feminist Economics (IAFFE) and of the WAPLAC Network on Wellbeing and Public Policy in Latin America and the Caribbean."
+    ],
+    areas:["Education","Income inequality","Poverty","Gender","Latin America"],
+    h:{appointments:"Appointments",education:"Education",affiliations:"Affiliations",
+       articles:"Published articles and chapters",chapters:"Chapters in press",books:"Books",wp:"Working papers",
+       courses:"Courses taught",supervisor:"Principal supervisor",chair:"Thesis chair",committee:"Thesis committee",
+       consulting:"Independent consulting",research:"Associate researcher",public:"Public service",
+       talks:"Seminars and conferences",review:"Peer review",awards:"Scholarships and awards",press:"Press",skills:"Languages and tools"},
+    appointments:[
+      {when:"March 2026 – present",what:"Head of Division",sub:"Division of Development Studies, Center for Research and Teaching in Economics (CIDE), Mexico City"},
+      {when:"May 2023 – present",what:"Professor",sub:"Center for Research and Teaching in Economics (CIDE), Mexico City"},
+      {when:"September 2021 – present",what:"Tutor",sub:"Facultad Latinoamericana de Ciencias Sociales (FLACSO), Mexico City"}
+    ],
+    education:[
+      {when:"2021",what:"PhD in Economics",sub:"University of Essex, Colchester, United Kingdom"},
+      {when:"2014",what:"Master in Economics",sub:"University of Western Ontario, London, Canada"},
+      {when:"2010",what:"Master in Government and Public Affairs",sub:"FLACSO, Mexico City"},
+      {when:"2005",what:"Bachelor in Economics",sub:"Universidad Nacional Autónoma de México (UNAM), Mexico City"}
+    ],
+    affiliations:["WAPLAC Network on Wellbeing and Public Policy in Latin America and the Caribbean","International Association for Feminist Economics (IAFFE)"],
+    courses:[
+      {when:"Spring 2026",what:"Econometrics",sub:"PhD Program in Public Policy, CIDE"},
+      {when:"Fall 2025",what:"Poverty and Education",sub:"Master in Development Economics, CIDE"},
+      {when:"Fall 2025",what:"Basic Quantitative Methods",sub:"Undergraduate in Political Science and International Relations, CIDE"},
+      {when:"Fall 2024",what:"Microeconomics I",sub:"Master in Development Economics, CIDE"},
+      {when:"Fall 2024",what:"Quantitative Methods",sub:"Master in Comparative Public Policy, FLACSO"},
+      {when:"Fall 2023",what:"Behavioral Economics for Public Policy",sub:"Master in Comparative Public Policy, FLACSO"}
+    ],
+    consulting:[
+      {when:"Jun – Sep 2025",what:"UNFPA Mexico",sub:"Quantitative and qualitative research on the economic effects of menopause on women in Mexico."},
+      {when:"Mar – Jul 2022",what:"OECD",sub:"On Shaky Ground? Income Instability and Economic Insecurity in Europe, OECD Publishing, Paris (2023)."},
+      {when:"Oct – Dec 2021",what:"Instituto de Liderazgo Simone de Beauvoir, A.C.",sub:"Evaluation of the pilot care policy implementation in Iztapalapa."},
+      {when:"May – Jun 2015",what:"UNICEF",sub:"Research on children out of school in Mexico using household surveys and administrative data."},
+      {when:"Apr – Jun 2013",what:"World Bank Group",sub:"Research on education in Latin America using household income surveys from the 1980s to the 2000s."}
+    ],
+    research:[{when:"May 2011 – Jun 2012",what:"Institute for Innovation in Education",sub:"Associate researcher. Empirical research on education, inequality and poverty using household surveys for 18 Latin American countries."}],
+    publicService:[
+      {when:"Sep 2010 – Apr 2011",what:"COFECE",sub:"Deputy Director, Mergers Department, Federal Economic Competition Commission."},
+      {when:"Oct 2005 – Aug 2008",what:"STC Metro",sub:"Assistant Manager, Finance Department, Mexico City Metro Transportation System."}
+    ],
+    talks:[
+      {when:"February 2025",what:"Measuring inequality and poverty with income and consumption data for Mexico",sub:"Permanent Seminar on Socioeconomic Inequality, COLMEX"},
+      {when:"January 2025",what:"Education in Mexico: PISA, school lag and rural context",sub:"International Seminar on Education and Regional Development, COLPUE"},
+      {when:"2023 – 2024",what:"Permanent Seminar on Economic, Social and Technological Development in Mexico",sub:"Coordination and organization: education, inequality, poverty, the gender gap, buen vivir, technological progress and the energy trilemma"},
+      {when:"May 2024",what:"Measuring inequality and poverty with income and consumption for Mexico",sub:"WAPLAC International Conference, San José, Costa Rica"},
+      {when:"November 2023",what:"The impact of education on income inequality in Latin America",sub:"Seminar for new professors, CIDE"},
+      {when:"September 2023",what:"Multidimensional poverty measurement in Mexico: a discussion on income measurement",sub:"INEGI, CONEVAL and COLMEX"},
+      {when:"May 2022",what:"The effects of education on inequality in Latin America",sub:"FLACSO Mexico"},
+      {when:"July 2017",what:"ECINEQ International Conference",sub:"Society for the Study of Economic Inequality, Stone Center for Socioeconomic Inequality, New York"}
+    ],
+    training:[
+      {when:"2017",what:"Implementing an estimation command in Stata/Mata",sub:"Center for Microdata Methods and Practice, London"},
+      {when:"2017",what:"Survey sampling and non-response",sub:"University of Essex"},
+      {when:"2017",what:"Applications of data analysis",sub:"University of Essex"},
+      {when:"2016",what:"The economics and econometrics of human development and social mobility",sub:"Masterclass by James Heckman, Center for Microdata Methods and Practice, London"},
+      {when:"2016",what:"Counterfactual impact evaluation seminar",sub:"National Centre for Research Methods, University of Southampton"},
+      {when:"2016",what:"Panel data methods",sub:"Center for Microdata Methods and Practice, London"},
+      {when:"2013",what:"OPHI Summer School on multidimensional poverty",sub:"George Washington University, Washington D.C."}
+    ],
+    awards:[
+      {when:"2015 – 2018",what:"Economic and Social Research Council Doctoral Training Studentship (ESRC)"},
+      {when:"2012 – 2016",what:"Postgraduate studies scholarship, CONACYT"},
+      {when:"2008 – 2010",what:"Graduate studies scholarship, CONACYT"},
+      {when:"2001 – 2005",what:"Academic excellence scholarship, School of Economics, UNAM"}
+    ],
+    press:[{when:"September 2023",what:"Milenio"},{when:"November 2023",what:"Education and Inequality"}],
+    skills:["Spanish (native)","English (fluent)","Stata","LaTeX","R (basic)"],
+    reviewLabel:"Reviewer for",
+    moreAdvising:"See thesis supervision and committees",
+    trainingLabel:"See additional training",
+    contactLede:"Get in touch about research collaborations, thesis supervision, or consulting on inequality, poverty and gender.",
+    contactNote:"CIDE, Division of Development Studies, Mexico City.",
+    footer:"Last updated 2026. Personal site of Claudia Sámano-Robles."
+  }
+};
+
+/* Bibliographic records are shared across languages. */
+const PUBS = {
+  articles:[
+    {year:"2026",text:"Jiménez-Brito, L. & Sámano-Robles, C. Care Work Overload and Intimate Partner Violence against Women: The Case of Mexico. <span class='venue'>Journal of Gender-Based Violence</span>.",link:"https://doi.org/10.1332/23986808Y2026D000000138"},
+    {year:"2026",text:"Sámano-Robles, C. & Jiménez-Brito, L. UTOPÍAS in Iztapalapa: Public infrastructure for territorial and gender justice in Mexico City. <span class='venue'>UCL Institute for Innovation and Public Purpose, IIPP SEA Case Study</span>."},
+    {year:"2026",text:"Sámano-Robles, C. & Ramón-Jaramillo, L. Data Report: Perceptions about Gender-Based Violence in Latin America, 2018 and 2023. <span class='venue'>Frontiers in Psychiatry — Public Mental Health</span>.",link:"https://doi.org/10.3389/fpsyt.2026.1758551"},
+    {year:"2026",text:"Sámano-Robles, C. Estudio sobre los efectos de la transición a la menopausia en la participación económica de las mujeres en México. <span class='venue'>Fondo de Población de las Naciones Unidas (UNFPA) México</span>."},
+    {year:"2025",text:"Sámano-Robles, C. ¿La paradoja del progreso en América Latina? Evidencia empírica para 18 países. <span class='venue'>Tramas y Redes</span>, (8), 51–70.",link:"https://doi.org/10.54871/cl4c80de"},
+    {year:"2024",text:"Sámano-Robles, C. La desigualdad en la distribución del ingreso en México: balance y perspectivas del Plan Nacional de Desarrollo 2018–2024. <span class='venue'>Argumentos</span>, Universidad Autónoma Metropolitana, Unidad Xochimilco.",link:"https://doi.org/10.24275/uamx/arg/2024105-01"},
+    {year:"2018",text:"Sámano-Robles, C. The impact of education on income inequality in Latin America between 2000 and 2010. In <span class='venue'>Inequality, Taxation and Intergenerational Transmission</span> (Research on Economic Inequality, Vol. 26), Emerald Publishing, 109–148.",link:"https://doi.org/10.1108/S1049-258520180000026007"},
+    {year:"2014",text:"Székely, M. & Sámano-Robles, C. Trade and income distribution in Latin America: Is there anything new to say? In <span class='venue'>Falling Inequality in Latin America: Policy Changes and Lessons</span>, 234–250."},
+    {year:"2011",text:"Sámano-Robles, C. <span class='venue'>Programas de Gobierno y Desigualdad en México</span>. Editorial Académica Española."}
+  ],
+  chapters:[
+    {year:"En prensa|In press",text:"Sámano-Robles, C. The paradox of progress: Comparative reflections on education and inequality in the EU and Latin America. In A. Berg Rodríguez & A. Ribeiro Hoffmann (Eds.), <span class='venue'>Towards New Forms of EU–LAC Relations</span> (United Nations University Series on Regionalism), Springer."}
+  ],
+  books:[
+    {year:"2026",text:"Sámano-Robles, C. <span class='venue'>Inequality and Education in Latin America: Understanding the Paradox of Progress</span>. Palgrave Macmillan."},
+    {year:"2025",text:"Sámano-Robles, C. & Berg-Rodríguez, A. (Eds.). <span class='venue'>Education and Gender in Latin America</span>. Springer, UNU-CRIS Series on Regionalism."}
+  ],
+  wp:[
+    {year:"2026",text:"Sámano-Robles, C. & Hernández-Vallesteros, V. Economic effects of menopause on women in Mexico."},
+    {year:"2026",text:"Sámano-Robles, C. & Ramón-Jaramillo, L. Intimate Partner Violence and Economic Insecurity in Latin America: An Ecological Framework."},
+    {year:"2024",text:"Sámano-Robles, C. Measuring inequality and poverty with income and consumption in Mexico, 1994–2014.",link:"https://assets-eu.researchsquare.com/files/rs-3954626/v1/f7e698e3-2033-4a25-8e41-0d931f1d7ac7.pdf"},
+    {year:"2019",text:"Brewer, M. & Sámano-Robles, C. Top incomes in the UK: analysis of the 2015–16 Survey of Personal Incomes. <span class='venue'>ISER Working Paper Series</span>, No. 2019-06."}
+  ]
+};
+
+const ADVISING = {
+  supervisor:[
+    {when:"Feb 2026",name:"Karina Denisse Cantú López",title:"Análisis de la vivienda adecuada en Nuevo León, 2022.",prog:"Maestría en Políticas Públicas Comparadas, FLACSO México|Master in Comparative Public Policy, FLACSO Mexico"},
+    {when:"Feb 2026",name:"Ricardo Hernández García",title:"Instrumentos en disputa: análisis del gasto social a través del uso de programas y acciones sociales en las alcaldías de la Ciudad de México (2019–2023).",prog:"Maestría en Políticas Públicas Comparadas, FLACSO México|Master in Comparative Public Policy, FLACSO Mexico"},
+    {when:"Ene 2026|Jan 2026",name:"Guillermo Dotro López",title:"El Fondo de Aportaciones para la Infraestructura Social Municipal (FISM) ejercido por los municipios del Estado de México, 2015–2020, y su contribución a la reducción de carencias sociales.",prog:"Maestría en Políticas Públicas Comparadas, FLACSO México|Master in Comparative Public Policy, FLACSO Mexico"},
+    {when:"Dic 2025|Dec 2025",name:"Angélica Moreno-Flores",title:"Reindustrialización con género: efectos del T-MEC sobre la participación femenina en el sector manufacturero mexicano.",prog:"Licenciatura en Ciencia Política y Relaciones Internacionales, CIDE|BA in Political Science and International Relations, CIDE"},
+    {when:"Dic 2023|Dec 2023",name:"Tomás-Emiliano Irena-Hernández",title:"La identidad social de la pobreza: análisis del problema público de la pobreza en la zona metropolitana del Valle de México desde un enfoque identitario y sociocognitivo.",prog:"Maestría en Políticas Públicas Comparadas, FLACSO México|Master in Comparative Public Policy, FLACSO Mexico"},
+    {when:"Sep 2014",name:"Ricardo Jaspeado Montiel",title:"La movilidad social en los beneficiarios del PROCAMPO: un panel sintético 1996–2012.",prog:"Maestría en Gobierno y Asuntos Públicos, FLACSO México|Master in Government and Public Affairs, FLACSO Mexico"}
+  ],
+  chair:[
+    {when:"Sep 2024",name:"Juan-Diego Gómez-Escobar",title:"Influencia de los factores territoriales e individuales de desarrollo sobre la pobreza a nivel municipal en México: cambios entre 2010 y 2020.",prog:""},
+    {when:"Sep 2016",name:"Alfredo Nieves-Cisneros",title:"La pobreza en México durante el periodo 2008–2014.",prog:"Maestría en Gobierno y Asuntos Públicos, FLACSO México|Master in Government and Public Affairs, FLACSO Mexico"},
+    {when:"Sep 2012",name:"Luis-Orfel García-Pacheco",title:"Desigualdad de oportunidades en México: una aproximación empírica para el periodo 2000–2010.",prog:"Maestría en Gobierno y Asuntos Públicos, FLACSO México|Master in Government and Public Affairs, FLACSO Mexico"}
+  ],
+  committee:[
+    {when:"Jun 2020",name:"Francisco Morales-Padilla",title:"Presencia de clústeres entre municipios industrializados y municipios de vocación agrícola: análisis de las externalidades positivas para el estado de Guanajuato.",prog:"Maestría en Políticas Públicas Comparadas, FLACSO México|Master in Comparative Public Policy, FLACSO Mexico"},
+    {when:"Ene 2020|Jan 2020",name:"Omar-Alfredo Gasca-Basilio",title:"Políticas para fortalecer la protección de los derechos laborales de los repartidores que trabajan bajo demanda a través de aplicaciones.",prog:"Maestría en Políticas Públicas Comparadas, FLACSO México|Master in Comparative Public Policy, FLACSO Mexico"},
+    {when:"Nov 2019",name:"Marilú Cisneros-Vargas",title:"La inversión extranjera directa en México: caso de estudio sobre las políticas públicas del Gobierno Federal, 1970–2018.",prog:"Maestría en Políticas Públicas Comparadas, FLACSO México|Master in Comparative Public Policy, FLACSO Mexico"}
+  ]
+};
+
+const REVIEW = [
+  {when:"2026",what:"Hispanic Health Care International"},
+  {when:"2026",what:"Frontiers in Psychology"},
+  {when:"2025",what:"Revista Internacional de Educación para la Justicia Social"},
+  {when:"2025",what:"Noesis"},
+  {when:"2024",what:"Regional Studies"},
+  {when:"2024",what:"Ciencia Nicolaíta"},
+  {when:"2022",what:"Estudios de Economía"}
+];
+
+/* pick(str, lang): "es|en" strings choose by language */
+const pick = (s,l) => s.includes("|") ? (l==="es" ? s.split("|")[0] : s.split("|")[1]) : s;
+
+const entries = (items) => `<ul class="entries">${items.map(i=>`
+  <li><span class="when">${i.when}</span>
+  <p class="what"><strong>${i.what}</strong>${i.sub?`<span class="sub">${i.sub}</span>`:""}</p></li>`).join("")}</ul>`;
+
+const cites = (items,lang) => `<ul class="entries">${items.map(i=>`
+  <li><span class="when">${pick(i.year,lang)}</span>
+  <p class="cite">${i.text}${i.link?`<br><a class="doi" href="${i.link}" target="_blank" rel="noopener">${i.link.replace(/^https?:\/\//,"")}</a>`:""}</p></li>`).join("")}</ul>`;
+
+const theses = (items,lang) => `<ul class="entries">${items.map(i=>`
+  <li><span class="when">${pick(i.when,lang)}</span>
+  <p class="what"><strong>${i.name}</strong><span class="sub">${i.title}${i.prog?` ${pick(i.prog,lang)}.`:""}</span></p></li>`).join("")}</ul>`;
+
+function render(lang){
+  const t = D[lang];
+  document.documentElement.lang = lang;
+  document.title = "Claudia Sámano-Robles";
+  document.querySelectorAll("[data-i18n]").forEach(el=>{ el.textContent = t[el.dataset.i18n]; });
+
+  document.getElementById("nav").innerHTML = Object.entries(t.nav)
+    .map(([k,v])=>`<li><a href="#${k}">${v}</a></li>`).join("");
+
+  document.getElementById("main").innerHTML = `
+  <section id="profile">
+    <h2>${t.nav.profile}</h2>
+    <p class="lede">${t.lede}</p>
+    ${t.bio.map(p=>`<p>${p}</p>`).join("")}
+    <ul class="areas">${t.areas.map(a=>`<li>${a}</li>`).join("")}</ul>
+    <h3>${t.h.appointments}</h3>
+    ${entries(t.appointments)}
+    <h3>${t.h.education}</h3>
+    ${entries(t.education)}
+    <h3>${t.h.affiliations}</h3>
+    <ul class="plain">${t.affiliations.map(a=>`<li>${a}</li>`).join("")}</ul>
+  </section>
+
+  <section id="publications">
+    <h2>${t.nav.publications}</h2>
+    <h3>${t.h.articles}</h3>
+    ${cites(PUBS.articles,lang)}
+    <h3>${t.h.chapters}</h3>
+    ${cites(PUBS.chapters,lang)}
+    <h3>${t.h.books}</h3>
+    ${cites(PUBS.books,lang)}
+    <h3>${t.h.wp}</h3>
+    ${cites(PUBS.wp,lang)}
+  </section>
+
+  <section id="teaching">
+    <h2>${t.nav.teaching}</h2>
+    <h3>${t.h.courses}</h3>
+    ${entries(t.courses)}
+    <h3>${t.h.supervisor}</h3>
+    ${theses(ADVISING.supervisor,lang)}
+    <details class="more">
+      <summary>${t.moreAdvising}</summary>
+      <h3>${t.h.chair}</h3>
+      ${theses(ADVISING.chair,lang)}
+      <h3>${t.h.committee}</h3>
+      ${theses(ADVISING.committee,lang)}
+    </details>
+  </section>
+
+  <section id="experience">
+    <h2>${t.nav.experience}</h2>
+    <h3>${t.h.consulting}</h3>
+    ${entries(t.consulting)}
+    <h3>${t.h.research}</h3>
+    ${entries(t.research)}
+    <h3>${t.h.public}</h3>
+    ${entries(t.publicService)}
+  </section>
+
+  <section id="activity">
+    <h2>${t.nav.activity}</h2>
+    <h3>${t.h.talks}</h3>
+    ${entries(t.talks)}
+    <h3>${t.h.review}</h3>
+    <ul class="plain">${REVIEW.map(r=>`<li><span class="when">${r.when}</span>${t.reviewLabel} <em>${r.what}</em></li>`).join("")}</ul>
+    <h3>${t.h.awards}</h3>
+    ${entries(t.awards)}
+    <details class="more">
+      <summary>${t.trainingLabel}</summary>
+      ${entries(t.training)}
+    </details>
+    <h3>${t.h.press}</h3>
+    ${entries(t.press)}
+  </section>
+
+  <section id="contact">
+    <h2>${t.nav.contact}</h2>
+    <p class="contact-line"><a href="mailto:claudia.samano@cide.edu">claudia.samano@cide.edu</a></p>
+    <p>${t.contactLede}</p>
+    <p class="what"><span class="sub">${t.contactNote}</span></p>
+    <h3>${t.h.skills}</h3>
+    <ul class="areas">${t.skills.map(s=>`<li>${s}</li>`).join("")}</ul>
+    <footer>${t.footer}</footer>
+  </section>`;
+
+  document.querySelectorAll(".lang button").forEach(b=>{
+    b.setAttribute("aria-pressed", String(b.dataset.lang===lang));
+  });
+  observeSections();
+}
+
+let obs;
+function observeSections(){
+  if(obs) obs.disconnect();
+  const links = [...document.querySelectorAll("#nav a")];
+  obs = new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        links.forEach(l=>l.setAttribute("aria-current", String(l.getAttribute("href")==="#"+e.target.id)));
+      }
+    });
+  },{rootMargin:"-25% 0px -65% 0px"});
+  document.querySelectorAll("main section").forEach(s=>obs.observe(s));
+}
+
+function setLang(lang,store){
+  render(lang);
+  if(store){ try{ localStorage.setItem("cs-lang",lang); }catch(e){} }
+}
+
+let initial = "es";
+try{
+  const saved = localStorage.getItem("cs-lang");
+  if(saved==="es"||saved==="en") initial = saved;
+  else if((navigator.language||"").toLowerCase().startsWith("en")) initial = "en";
+}catch(e){}
+
+document.querySelectorAll(".lang button").forEach(b=>{
+  b.addEventListener("click",()=>setLang(b.dataset.lang,true));
+});
+setLang(initial,false);
+</script>
+</body>
+</html>
